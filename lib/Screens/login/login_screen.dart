@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
       padding: const EdgeInsets.all(5.0),
       child: TextFormField(
         controller: passwordController,
-        obscureText: isShowPassword,
+        obscureText: !isShowPassword,
         keyboardType: TextInputType.emailAddress,
         validator: (value){
           if (passwordController.text.isEmpty) {
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
             prefixIcon: Icon(
               icon,
               color: Colors.black12,
-            ),suffixIcon: IconButton(icon: Icon(!isShowPassword?Icons.visibility:Icons.visibility_off), onPressed: () { setState(() {
+            ),suffixIcon: IconButton(icon: Icon(isShowPassword?Icons.visibility:Icons.visibility_off), onPressed: () { setState(() {
           isShowPassword = !isShowPassword;
         }); },),
             enabledBorder: OutlineInputBorder(

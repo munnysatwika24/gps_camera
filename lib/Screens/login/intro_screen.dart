@@ -205,6 +205,7 @@ class _IntroScreenState extends State<IntroScreen> {
                               print(
                                   "Location services are disabled or permission is denied.");
                             }
+
                           });
 
                         },
